@@ -1,5 +1,5 @@
 # 기사는 타이밍 
-Unity 기반의 모바일 게임과
+Unity6 기반의 모바일 게임과
 React + Spring Boot 기반의 게임 홈페이지
 
 ## 팀원 소개
