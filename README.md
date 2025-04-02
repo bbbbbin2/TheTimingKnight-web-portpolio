@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 기사는 타이밍 
 Unity6 기반의 모바일 게임과
 React + Spring Boot 기반의 게임 홈페이지
@@ -21,3 +22,4 @@ React + Spring Boot 기반의 게임 홈페이지
  - node.js
  - Springboot
  - MySql
+
