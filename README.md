@@ -12,9 +12,12 @@ React + Spring Boot 기반의 게임 홈페이지
 
 ## 기술 스택
 
-### Front-end
-- React
-- node.js
-### Back-end
+### 앱 개발
+ - Unity6 
+ - Google Sheets
+   
+### 웹 개발
+ - React
+ - node.js
  - Springboot
  - MySql
