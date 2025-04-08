@@ -28,15 +28,11 @@ function Signup() {
     <Header />
       <h2>회원가입</h2>
       <form onSubmit={handleSignup}>
-        <input
-          type="text"
-          placeholder="아이디"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-          required
-        />
-        <button class="check-btn">중복 확인</button>
-
+      <div className="input-with-button">
+        <input type="text" placeholder="아이디를 입력해주세요." />
+        <button className="check-btn">중복 확인</button>
+      </div>
+      
         <input
           type="password"
           placeholder="비밀번호"
@@ -44,6 +40,7 @@ function Signup() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+  
         <input
           type="password"
           placeholder="비밀번호 확인"
@@ -52,8 +49,8 @@ function Signup() {
           required
         />
         {error && <p className="error-message">{error}</p>}
-        <button type="submit">가입하기</button>
-      </form>
+        <button type="submit" className="signup-btn">가입하기</button>
+        </form>
     </div>
     </div>
   );

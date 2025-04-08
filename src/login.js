@@ -28,7 +28,7 @@ function Login() {
           value={id}
           onChange={(e) => setId(e.target.value)}
           required
-        />
+          />
         <input
           type="password"
           placeholder="비밀번호"
@@ -38,7 +38,8 @@ function Login() {
         />
         <button type="submit">로그인</button>
       </form>
-      <p>아직 계정이 없으면 회원가입을 진행해주세요!</p>
+      <p className="signup-message"> 아직 계정이 없으면 회원가입을 진행해주세요!</p>
+
       <button className="signup-btn" onClick={() => navigate('/signup')}>
         회원가입
       </button>

@@ -6,90 +6,92 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* 가로 스크롤 방지 */
   background-image: url('image/log_bg.png');
-  width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* 두 배경 모두 고정 */
   background-repeat: no-repeat;
-  color: white;
+  color: #5C2D1B;
   font-family: 'HakgyoansimJiugaeR', sans-serif;
+  
 } 
 
+input::placeholder {
+  color: #A0A0A0; /* 원하는 색상으로 변경 */
+  opacity: 1; /* Firefox에서 흐릿해지는 것 방지 */
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+}
 .login-container {
-   
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
+    height: 450px;
     margin: 230px auto;
     padding: 30px;
-    background: white;
+    background-color:rgba(0, 0, 0, 0.05) ;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    
   }
   
   /* 로그인 제목 */
   .login-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #D02518;
-    font-size: 45px;
+    margin: 40px;
+    color: #5C2D1B;
+    text-shadow: -1px -1px white, 1px 1px white;
+    font-size: 60px;
+    font-weight: 100;
   }
   
   /* 입력 필드 스타일 */
   .login-container input {
     width: 90%;
     padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 18px;
+    border: 1px solid #BEBEBE;
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s ease;
+    font-family: 'HakgyoansimJiugaeR', sans-serif;
+    border-radius: 20px;
+    color: #A0A0A0;
   }
   
-  /* 입력 필드 포커스 효과 */
-  .login-container input:focus {
+  input:focus {
     border-color: #ffcc00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+    outline: none; /* 기본 테두리 제거 */
   }
+  
   
   /* 로그인 버튼 */
   .login-container button {
-    width: 100%;
+    width: 93%;
     height: 50px;
     padding: 12px;
-    background-color: #ffcc00;
+    background-color: #FFEA7E;
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    color: black;
-    font-weight: bold;
+    color: #5C2D1B;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-
-  .p{
-    font-size : 16px;
-    color:#ccc
-  }
-  
-  /* 버튼 호버 효과 */
-  .login-container button:hover {
-    background-color: #e6b800;
+    border-radius: 20px;
+    font-family: 'HakgyoansimJiugaeR', sans-serif;
   }
   
   /* 회원가입 버튼 */
   .signup-btn {
-    margin-top: 10px;
     background: none;
     border: none;
     font-size: 16px;
-    color: #007bff;
+    color: #5C2D1B;
     cursor: pointer;
-    /* text-decoration: underline; */
+
+  }
+  .signup-message {
+    font-size: 14px;
+    color: #606060;
+    margin: 25px 0px 0px 0px;
   }
   
-  .signup-btn:hover {
-    color: #0056b3;
-  }
+
   
