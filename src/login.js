@@ -16,7 +16,7 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="login">
     <Header />
 
     <div className="login-container">
@@ -43,7 +43,7 @@ function Login() {
         회원가입
       </button>
     </div>
-    </>
+    </div>
   );
 }
 

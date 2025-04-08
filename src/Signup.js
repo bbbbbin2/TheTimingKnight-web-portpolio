@@ -23,6 +23,7 @@ function Signup() {
   };
 
   return (
+    <div className="Signup">
     <div className="signup-container">
     <Header />
       <h2>회원가입</h2>
@@ -53,6 +54,7 @@ function Signup() {
         {error && <p className="error-message">{error}</p>}
         <button type="submit">가입하기</button>
       </form>
+    </div>
     </div>
   );
 }

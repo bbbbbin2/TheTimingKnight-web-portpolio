@@ -1,4 +1,20 @@
 /* 회원가입 페이지 스타일 */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+  background-image: url('image/log_bg.png');
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 두 배경 모두 고정 */
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+} 
+
 .signup-container {
     width: 100%;
     max-width: 400px;
