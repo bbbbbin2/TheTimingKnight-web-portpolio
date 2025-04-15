@@ -1,18 +1,20 @@
-/* 회원가입 페이지 스타일 */
-
+/* 공통 기본값 (초기화용) */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* 가로 스크롤 방지 */
+  overflow-x: hidden;
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+  background: none; /* 기본은 배경 없음 */
+}
+
+/* 회원가입 전용 배경 */
+body.signup-body {
   background-image: url('image/log_bg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* 두 배경 모두 고정 */
   background-repeat: no-repeat;
-  color: white;
-  font-family: 'HakgyoansimJiugaeR', sans-serif;
-} 
+}
 
 input::placeholder {
   color: #A0A0A0; /* 원하는 색상으로 변경 */

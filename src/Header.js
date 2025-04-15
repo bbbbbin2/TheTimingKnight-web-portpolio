@@ -15,7 +15,7 @@ function Header() {
               <Link to="/intro">게임소개</Link>
               <div className="tooltip">
                 <Link to="/worldview" className="tooltip-link">세계관</Link>
-                <Link to="/characters" className="tooltip-link">캐릭터/몬스터</Link>
+                <Link to="/Characters" className="tooltip-link">캐릭터/몬스터</Link>
                 <Link to="/creator" className="tooltip-link">제작자</Link>
               </div>
             </li>

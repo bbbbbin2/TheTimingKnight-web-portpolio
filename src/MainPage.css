@@ -1,148 +1,201 @@
- /* 폰트 로딩 정의 */
- @font-face {
-    font-family: 'HakgyoansimJiugaeR'; /* 원하는 이름 지정 */
-    src: url('./assets/fonts/HakgyoansimJiugaeR.ttf') format('truetype'); /* 폰트 파일 경로 */
-    font-weight: normal;
-    font-style: normal;
-  }
-  
+/* ✅ 폰트 로딩 정의 */
+@font-face {
+  font-family: 'HakgyoansimJiugaeR';
+  src: url('./assets/fonts/HakgyoansimJiugaeR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  
+
+/* ✅ 기본 리셋 및 공통 */
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* 가로 스크롤 방지 */
-  }
-  
-  
-  .App {
-    text-align: center;
-  }
-  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+  background-color: black; /* fallback */
+}
 
-.MainPage {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-image: url('image/bg1.png');
-    background-size: cover; /* image4는 cover, RPG는 원본 크기 */
-    background-position: center;
-    background-attachment: fixed; /* 두 배경 모두 고정 */
-    background-repeat: no-repeat;
-    color: white;
-    font-family: 'HakgyoansimJiugaeR', sans-serif;
-  }
+.App {
+  text-align: center;
+}
 
-  
 
-  .monster-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 1100px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .monster {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    position: relative; /* 부모 요소 설정 */
-    z-index: 2; /* pp-image보다 위에 있도록 설정 */
-  }
-  
-  .monster:hover {
-    transform: scale(1.03);
-  }
-  
-  .pp-image {
-    position: absolute;
-    width: 1200px; /* 크기 조정 */
-    height: auto;
-    /* bottom: 50px; monster 위쪽으로 배치 */
-    z-index: 1; /* monster보다 아래 */
-    /* pointer-events: none; 마우스 이벤트 차단 */
-    animation: moveSide 1s infinite alternate ease-in-out;
-    
-  }
-  
-  
-   /* logo2 이미지 hover */
-   .logo2:hover {
-    transform: scale(1.03);  /* 마우스 올리면 10% 커짐 */
-  }
-   
-  /* logo2 이미지 */
+/* ✅ 전체 레이아웃 구조 */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  /* padding-top: 80px; */
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+}
+
+.bg1 {
+  background-image: url('image/bg1.png');
+}
+
+.bg2 {
+  background-image: url('image/bg2.png');
+}
+
+
+/* ✅ Header 고정 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+
+/* ✅ 고정 UI 요소 */
+
+/* 로고 이미지 */
+.logo2 {
+  position: fixed;
+  top: 21%;
+  right: 8%;
+  width: 40vw;
+  max-width: 750px;
+  height: auto;
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+}
+.logo2:hover {
+  transform: scale(1.03);
+}
+
+/* 포인트 이미지 */
+.point {
+  position: fixed;
+  top: 160px;
+  right: 155px;
+  width: 50px;
+  height: auto;
+  z-index: 2;
+}
+
+/* 다운로드 버튼 */
+.download-section {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  text-align: center;
+  z-index: 10;
+}
+.download-icon {
+  width: 230px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 11;
+}
+.download-icon:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ 몬스터 이미지 */
+.monster {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 1000px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+.monster:hover {
+  transform: scale(1.03);
+}
+
+.gameinfo-section {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.gameinfo-icon {
+  width: 700px;
+  height: auto;
+  max-width: 90vw;
+}
+
+
+/* ✅ 특수 이미지 */
+
+.pp-image {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  z-index: 1;
+  animation: moveSide 1s infinite alternate ease-in-out;
+}
+
+.pp2-image {
+  position: absolute;
+  bottom: 100px;       
+  left: 0;           
+  width: 40%;        
+  max-width: 1000px;  
+  height: auto;
+  z-index: 1;
+  animation: moveSide 1s infinite alternate ease-in-out;
+}
+
+
+/* ✅ 사이드바 & 캐릭터 */
+.sidebar {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-box {
+  width: 210px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.character {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* ✅ 반응형 디자인 */
+@media (max-width: 768px) {
   .logo2 {
-    top: 200px;  /* 위에서 200px 떨어지게 */
-    right: 140px;  /* 오른쪽에서 140px 떨어지게 */
-    width: 750px;
-    height: auto;
-    z-index: 2;  /* shine보다 아래 */
-    transition: transform 0.3s ease-in-out;
-    position: fixed;
-    object-fit: cover;  /* 이미지가 비율에 맞게 잘리도록 설정 */
+    width: 70vw;
+    right: 3%;
+    top: 5%;
   }
 
-  /* point 이미지 */
-  .point {
-    position: fixed;
-    top: 160px;  /* logo2와 동일한 위 위치 */
-    right: 155px;  /* logo2의 오른쪽 끝에 맞춰서 배치 */
-    width: 50px;  /* 크기 조정 */
-    height: auto;
-  
+  .monster {
+    width: 90vw;
   }
-  
-  
-  
-  /* 사이드바 스타일링 */
-  .sidebar {
-    position: absolute;
-    /* left: 10px; 기존보다 조금 줄임 */
-    top: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .character-box {
-    width: 210px;
-    height: 250px;
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-left: 10px; /* 왼쪽으로 이동 */
-  
-  }
-  
-  .character {
-    width: 100%;
-    height: auto;
-  }
-  
-  
-  .download-section {
-    position: fixed;
-    bottom: 50px;
-    right: 50px; /* 기존 margin-left 대신 left 사용 */
-    text-align: center;
-  }
-  
+
   .download-icon {
-    width: 230px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* 크기 변경에 부드러운 애니메이션 추가 */
+    width: 180px;
   }
-  
-  .download-icon:hover {
-    transform: scale(1.05); /* 크기를 10% 키움 */
+
+  .character-box {
+    width: 150px;
   }
-  
-  
+}

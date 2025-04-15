@@ -1,19 +1,20 @@
-
-/* 로그인 페이지 기본 스타일 */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* 가로 스크롤 방지 */
+  overflow-x: hidden;
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+  background: none; /* 기본은 배경 없음 */
+}
+
+/* 로그인 전용 배경 */
+body.login-body {
   background-image: url('image/log_bg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* 두 배경 모두 고정 */
   background-repeat: no-repeat;
-  color: #5C2D1B;
-  font-family: 'HakgyoansimJiugaeR', sans-serif;
-  
-} 
+}
+
 
 input::placeholder {
   color: #A0A0A0; /* 원하는 색상으로 변경 */

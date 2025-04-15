@@ -46,6 +46,17 @@
        1px -1px 0 black,  
       -1px  1px 0 black,  
        1px  1px 0 black; 
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 80px; /* 필요시 조절 */
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       z-index: 999; /* 다른 요소보다 위 */
+       padding: 0 30px;
+       box-sizing: border-box;
   }
 
   .logo-and-tabs:hover {
@@ -56,6 +67,8 @@
     width: 180px;
     height: auto;
     right: 40px; /* 로고와 탭 사이 간격 */
+    object-fit: contain;
+
   }
   
   .tabs {
@@ -74,6 +87,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
+      list-style: none;
+
   }
   
   .tabs li {
