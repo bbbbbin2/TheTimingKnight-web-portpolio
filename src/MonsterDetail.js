@@ -9,7 +9,7 @@ function MonsterDetail({ monster }) {
         <p className="monster-desc">{monster.desc}</p>
       </div>
       <div className="monster-image">
-        <img src={monster.bigImage} alt={monster.name} />
+        <img src={monster.bigImg} alt={monster.name} />
       </div>
     </div>
   );

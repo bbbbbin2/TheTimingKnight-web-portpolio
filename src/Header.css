@@ -14,18 +14,12 @@
     height: 80px;  /* 원하는 높이 설정 */
     display: flex;
     align-items: center;
-    padding-top : 35px;
+    top : 35px;
     justify-content: space-between;
-    /* padding: 0 30px; */
     z-index: 1000;  /* 다른 요소 위에 배치 */
     font-family: 'HakgyoansimJiugaeR', sans-serif;
   }
-  
-  /* 헤더 아래 컨텐츠가 가려지지 않게 여백 추가
-  body {
-    padding-top: 80px;
-  } */
-  
+
 
 .logo-and-tabs {
     display: flex;
@@ -87,7 +81,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-      list-style: none;
+    list-style: none;
 
   }
   

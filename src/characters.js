@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import Header from './Header';
-import CMbar from './CMbar';
-import MonsterDetail from './MonsterDetail'; // 상세정보 컴포넌트
+import CMbar, { character } from './CMbar';
+import MonsterDetail from './MonsterDetail';
+import bg3 from './image/bg3.png';
+
 
 function CharactersPage() {
-  const [selectedMonster, setSelectedMonster] = useState(null);
+  const [selectedMonster, setSelectedMonster] = useState(character);
 
   return (
-    <div style={{ backgroundColor: '#eeeeee', minHeight: '100vh', paddingBottom: '120px', position: 'relative' }}>
+    <div
+      style={{
+        backgroundImage: `url(${bg3})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh',
+        position: 'relative'
+      }}
+    >
       <Header />
 
-      {/* 중앙 콘텐츠 */}
       <div style={{ paddingTop: '100px', textAlign: 'center' }}>
         {selectedMonster && <MonsterDetail monster={selectedMonster} />}
       </div>
 
-      {/* 하단 바 */}
       <CMbar onSelectMonster={setSelectedMonster} />
     </div>
   );

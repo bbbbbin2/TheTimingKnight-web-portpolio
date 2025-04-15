@@ -1,13 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // react-router-dom 추가
+import { Link, useNavigate } from 'react-router-dom'; // ✅ useNavigate 추가
 import logo from './image/logo.png';
 import './Header.css';
 
 function Header() {
+  const navigate = useNavigate(); 
+
   return (
     <header className="App-header">
       <div className="logo-and-tabs">
-        <img src={logo} alt="기사 타이밍 로고" className="logo" />
+        <img
+          src={logo}
+          alt="기사 타이밍 로고"
+          className="logo"
+          onClick={() => navigate('/')}
+          style={{ cursor: 'pointer' }}
+        />
+        
         <nav className="tabs">
           <ul>
             <li><Link to="/">메인</Link></li>  {/* 메인 페이지 이동 */}
@@ -15,7 +24,7 @@ function Header() {
               <Link to="/intro">게임소개</Link>
               <div className="tooltip">
                 <Link to="/worldview" className="tooltip-link">세계관</Link>
-                <Link to="/Characters" className="tooltip-link">캐릭터/몬스터</Link>
+                <Link to={{pathname: "/characters",}}state={{ selectedMonsterId: 'hero' }}className="tooltip-link">캐릭터/몬스터</Link>
                 <Link to="/creator" className="tooltip-link">제작자</Link>
               </div>
             </li>

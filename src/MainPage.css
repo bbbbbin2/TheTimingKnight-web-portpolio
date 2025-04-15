@@ -30,7 +30,6 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   will-change: transform;
-  /* padding-top: 80px; */
   font-family: 'HakgyoansimJiugaeR', sans-serif;
 }
 
@@ -168,8 +167,6 @@ html, body {
   height: 250px;
   padding: 10px;
   text-align: center;
-  margin-bottom: 20px;
-  margin-left: 10px;
 }
 
 .character {
