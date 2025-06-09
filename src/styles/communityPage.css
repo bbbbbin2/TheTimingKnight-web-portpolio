@@ -1,0 +1,110 @@
+/* 커뮤니티 페이지 전체에 여백을 추가하여 콘텐츠를 아래로 내림 */
+.community-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px; /* 커뮤니티 페이지를 화면에서 조금 더 아래로 내리기 */
+}
+
+/* 제목 스타일 (커뮤니티 글씨를 노란색으로 변경) */
+.community-container h1 {
+  color: #FFD400; /* 노란색 */
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  margin-top : 50px;
+}
+
+/* 버튼 래퍼에 여백 추가 */
+.community-button-wrap {
+  text-align: right;
+  margin-bottom: 20px;
+  margin-top: 40px; /* 버튼을 아래로 밀기 */
+}
+
+/* 버튼 스타일 */
+.community-button {
+  padding: 10px 16px;
+  background-color: #FFD400;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 게시글 목록 스타일 */
+.community-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px; /* 게시글 목록을 아래로 밀기 */
+}
+
+/* 게시글 아이템 스타일 */
+.community-post-item {
+  display: flex;
+  justify-content: space-between; /* 제목, 작성자, 댓글 수를 가로로 배치 */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  align-items: center; /* 세로 정렬을 중앙으로 */
+}
+
+/* 제목, 작성자, 댓글 수를 나열할 영역 */
+.community-title, .community-meta, .community-comments {
+  flex: 1;  /* 각 요소가 가능한 공간을 동일하게 차지 */
+}
+
+/* 게시글 제목 스타일 */
+.community-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 게시글 미리보기 텍스트 스타일 */
+.community-preview {
+  color: #555;
+}
+
+/* 작성자 및 작성일 스타일 */
+.community-meta {
+  font-size: 0.9em;
+  color: #999;
+}
+
+/* 댓글 수 스타일 */
+.community-comments {
+  font-size: 0.9em;
+  color: #999;
+  text-align: center;  /* 중앙 정렬 */
+}
+
+/* 페이지가 작은 화면에서 텍스트 크기 조정 */
+@media (max-width: 768px) {
+  .community-container {
+    padding: 10px;
+    margin-top: 60px; /* 작은 화면에서 여백을 조금 줄여줌 */
+  }
+
+  .community-button {
+    font-size: 14px;
+  }
+
+  .community-title {
+    font-size: 20px;
+  }
+
+  .community-preview {
+    font-size: 14px;
+  }
+
+  .community-meta {
+    font-size: 0.8em;
+  }
+
+  /* 작은 화면에서 버튼 스타일 변경 */
+  .community-button-wrap {
+    margin-top: 20px; /* 모바일 화면에서는 버튼을 조금 더 위로 */
+  }
+}

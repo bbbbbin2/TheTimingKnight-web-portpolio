@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+  background-color: #FFFFFF;
+}
+.news-page {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+/* news.css */
+
+.news-banner {
+  /* 기존 스타일 유지 */
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 헤더 높이(예: 80px) 만큼 밀어내기 */
+  margin-top: 0px;      /* ← 헤더 실제 높이에 맞춰 조정하세요 */
+  position: relative;    /* position: absolute 였다면 제거 */
+  z-index: 900;          /* 헤더(z-index:1000)보다 낮게 */
+}
+
+/* 상단 탭 */
+.news-tabs {
+  top: 500px;
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 24px;
+}
+
+.news-tabs li {
+  list-style: none;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+}
+
+.news-tabs li.active {
+  color: #3a9c3a;
+  border-bottom: 2px solid #3a9c3a;
+}
+
+/* 헤딩 */
+.news-heading {
+  margin: 0 0 24px;
+  font-size: 30px;
+  color: #333;
+}
+
+/* 검색/필터 컨트롤 */
+.news-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.news-controls select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.news-controls input {
+  padding: 8px 12px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 리스트 */
+.news-list {
+  margin: 0;
+  padding: 0;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pill {
+  background-color: #e6f4ea;
+  color: #3a9c3a;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.title {
+  color: #333;
+}
+
+.time {
+  color: #999;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.news-banner {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-banner-title {
+  color: white;
+  font-size: 60px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin: 0;
+}

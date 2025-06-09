@@ -1,0 +1,63 @@
+/* components/CardCarousel.css */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 800px;
+    height: 480px;
+  }
+  
+  .card {
+    position: absolute;
+    top: 0;
+    width: 280px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .card.center {
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    z-index: 30;
+  }
+  
+  .card.left {
+    left: 10%;
+    transform: scale(0.9);
+    z-index: 20;
+  }
+  
+  .card.right {
+    left: 70%;
+    transform: scale(0.9);
+    z-index: 20;
+  }
+  
+  .card-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  
+  .arrow {
+    width: 40px;
+    cursor: pointer;
+    z-index: 40;
+  }
+  
+  .left-arrow {
+    margin-right: 20px;
+  }
+  
+  .right-arrow {
+    margin-left: 20px;
+  }
+  

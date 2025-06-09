@@ -1,0 +1,44 @@
+/* 로고 링크 스타일 */
+.logo-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+/* 로고 이미지 스타일 */
+.logo {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .logo-link {
+    top: 15px;
+    left: 15px;
+  }
+  
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-link {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+}

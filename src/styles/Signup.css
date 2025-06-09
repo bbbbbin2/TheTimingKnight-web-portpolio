@@ -1,0 +1,331 @@
+/* html, body 영역에 배경 이미지를 직접 지우고… */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+  overflow-x: auto;
+  background: none;  /* 기존 background-image: none; */
+}
+
+/* body에 ::before로 배경 레이어 추가 */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../image/log_bg.png') no-repeat center/cover;
+  opacity: 0.9;       /* 50% 투명도 */
+  z-index: -1;        /* 뒤로 보내서 본문 위로 오게 */
+}
+
+
+/* 회원가입 페이지 전체 레이아웃 */
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 로고 섹션 */
+.logo-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.logo-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+  letter-spacing: -1px;
+}
+
+.logo-underline {
+  width: 350px;
+  height: 4px;
+  background-color: #8b5cf6;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* 회원가입 컨테이너 */
+.signup-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+
+/* 회원가입 제목 */
+.signup-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+/* 회원가입 폼 */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 입력 그룹 */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 아이디 중복확인 컨테이너 */
+.username-check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  
+}
+
+.username-input {
+  flex: 1;
+}
+
+.duplicate-check-btn {
+  padding: 16px 20px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  height: 52px;
+  box-sizing: border-box;
+}
+
+.duplicate-check-btn:hover:not(:disabled) {
+  background-color: #8b5cf6;
+  transform: translateY(-1px);
+}
+
+.duplicate-check-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 입력 필드 */
+.signup-input {
+  width: 100%;
+  padding: 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #374151;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.signup-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.signup-input::placeholder {
+  color: #9ca3af;
+}
+
+/* 메시지 스타일 */
+.error-message {
+  color: #ef4444;
+  font-size: 14px;
+  margin: 0;
+  padding: 8px 12px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 14px;
+  margin: 0;
+  padding: 8px 12px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+}
+
+.password-strength {
+  color: #f59e0b;
+  font-size: 14px;
+  margin: 0;
+  padding: 8px 12px;
+  background-color: #fffbeb;
+  border: 1px solid #fed7aa;
+  border-radius: 6px;
+}
+
+/* 메인 에러/성공 메시지 */
+.main-error,
+.main-success {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 회원가입 버튼 */
+.signup-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.signup-button:hover:not(:disabled) {
+  background-color: #7c3aed;
+  transform: translateY(-1px);
+}
+
+.signup-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.signup-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+}
+
+.signup-button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 로그인 링크 섹션 */
+.signup-links {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.login-text {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.login-link-button {
+  background: none;
+  border: none;
+  color: #8b5cf6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+}
+
+.login-link-button:hover {
+  color: #7c3aed;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 16px;
+  }
+  
+  .logo-title {
+    font-size: 36px;
+  }
+  
+  .signup-container {
+    padding: 24px;
+    max-width: 100%;
+  }
+  
+  .signup-title {
+    font-size: 24px;
+  }
+  
+  .username-check {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .duplicate-check-btn {
+    width: 100%;
+    height: auto;
+  }
+  
+  .signup-input {
+    font-size: 16px; /* iOS zoom 방지 */
+  }
+}
+
+/* 로딩 상태 (선택사항) */
+.signup-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.signup-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff40;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 입력 필드 상태별 스타일 */
+.signup-input.valid {
+  border-color: #10b981;
+}
+
+.signup-input.invalid {
+  border-color: #ef4444;
+}
+
+/* 포커스 효과 개선 */
+.signup-input:focus.valid {
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.signup-input:focus.invalid {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}

@@ -1,22 +1,32 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import MainPage from './MainPage'; // ✅ 메인 페이지 분리
-import Login from './login'; // 로그인 페이지
-import Signup from './Signup'; // 회원가입 페이지
-import CharactersPage from './characters'; // characters.js로 만든 컴포넌트
-
+import './styles/App.css';
+import MainPage from './pages/MainPage';
+import Login from './pages/Login';
+import Signup from './pages/signup';
+import CommunityPage from './pages/communityPage';
+import PostDetailPage from './pages/postDetailPage';
+import CreatePostPage from './pages/CreatePostPage';
+import CharactersPage from './pages/characters';
+import NewsPage from './pages/NewsPage';
+import GameShop from './pages/GameShop';
+import Worldview from './pages/Worldview';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<MainPage />} /> {/* 메인 페이지 */}
-          <Route path="/login" element={<Login />} /> {/* 로그인 페이지 */}
-          <Route path="/signup" element={<Signup />} /> {/* 회원가입 추가 */}
+          <Route path="/" element={<MainPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="/post/:id" element={<PostDetailPage />} />
+          <Route path="/create-post" element={<CreatePostPage />} />
           <Route path="/characters" element={<CharactersPage />} />
-
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/gameshop" element={<GameShop />} />
+         <Route path="/worldview" element={<Worldview />} />
         </Routes>
       </div>
     </Router>

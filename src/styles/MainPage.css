@@ -1,0 +1,189 @@
+ /* 폰트 로딩 정의 */
+ @font-face {
+  font-family: 'HakgyoansimJiugaeR'; /* 원하는 이름 지정 */
+  src: url('../assets/fonts/HakgyoansimJiugaeR.ttf') format('truetype'); /* 폰트 파일 경로 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+
+.App {
+  text-align: center;
+}
+
+
+.MainPage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../image/bg1.png');
+  background-size: cover; /* image4는 cover, RPG는 원본 크기 */
+  background-position: center;
+  background-attachment: fixed; /* 두 배경 모두 고정 */
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'HakgyoansimJiugaeR', sans-serif;
+}
+
+
+
+.monster-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 1100px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.monster {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* 부모 요소 설정 */
+  z-index: 2; /* pp-image보다 위에 있도록 설정 */
+}
+
+.monster:hover {
+  transform: scale(1.03);
+}
+
+.pp-image {
+  position: absolute;
+  width: 1200px; /* 크기 조정 */
+  height: auto;
+  /* bottom: 50px; monster 위쪽으로 배치 */
+  z-index: 1; /* monster보다 아래 */
+  /* pointer-events: none; 마우스 이벤트 차단 */
+  animation: moveSide 1s infinite alternate ease-in-out;
+  
+}
+
+
+ /* logo2 이미지 hover */
+ .logo2:hover {
+  transform: scale(1.03);  /* 마우스 올리면 10% 커짐 */
+}
+ 
+/* logo2 이미지 */
+.logo2 {
+  top: 200px;  /* 위에서 200px 떨어지게 */
+  right: 140px;  /* 오른쪽에서 140px 떨어지게 */
+  width: 750px;
+  height: auto;
+  z-index: 2;  /* shine보다 아래 */
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  object-fit: cover;  /* 이미지가 비율에 맞게 잘리도록 설정 */
+}
+
+/* point 이미지 */
+.point {
+  position: fixed;
+  top: 160px;  /* logo2와 동일한 위 위치 */
+  right: 155px;  /* logo2의 오른쪽 끝에 맞춰서 배치 */
+  width: 50px;  /* 크기 조정 */
+  height: auto;
+
+}
+
+
+
+/* 사이드바 스타일링 */
+.sidebar {
+  position: absolute;
+  /* left: 10px; 기존보다 조금 줄임 */
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-box {
+  width: 210px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 10px; /* 왼쪽으로 이동 */
+
+}
+
+.character {
+  width: 100%;
+  height: auto;
+}
+
+
+.download-section {
+  position: fixed;
+  bottom: 50px;
+  right: 50px; /* 기존 margin-left 대신 left 사용 */
+  text-align: center;
+}
+
+.download-icon {
+  width: 230px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* 크기 변경에 부드러운 애니메이션 추가 */
+}
+
+.download-icon:hover {
+  transform: scale(1.05); /* 크기를 10% 키움 */
+}
+
+
+.auth-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.login-link:hover {
+  color: #007bff;
+}
+/* 이미지 컨테이너를 relative로 */
+.character-box {
+  position: relative;
+  display: inline-block;
+}
+
+/* 오버레이 텍스트 */
+.character-box .login-overlay {
+  position: absolute;
+  bottom: 22.41%;               /* 필요에 따라 조정 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  color: #fff;                           /* 흰색 글씨 */
+  /* background-color: rgba(47, 60, 77 ); 반투명 배경 */
+  background-color: #3A4364;
+  padding: 4px 8px;
+  border-radius: 4px;
+
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}

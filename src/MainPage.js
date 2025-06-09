@@ -9,7 +9,8 @@
   import logo2 from './image/logo2.png';
   import point from './image/point.png';
   import monster from './image/monster.png';
-  import gameinfo from './image/gameinfo.png';
+  // import gameinfo from './image/gameinfo.png';
+  import CardCarousel from './CardCarousel.js';
 
 
   function MainPage() {
@@ -75,11 +76,8 @@
   </div>
 
   <div className="gameinfo-section">
-    <img
-      src={gameinfo}
-      alt="게임 소개"
-      className="gameinfo-icon"
-    />
+  <CardCarousel />
+
   </div>
 </div>
 </div>

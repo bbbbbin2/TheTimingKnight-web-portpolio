@@ -1,0 +1,78 @@
+/* 전체 배경 및 폰트 스타일 */
+@font-face {
+    font-family: 'HakgyoansimJiugaeR';
+    src: url('../assets/fonts/HakgyoansimJiugaeR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+.create-post-container {
+        font-family: 'HakgyoansimJiugaeR', sans-serif;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 130px; /* 커뮤니티 페이지를 화면에서 조금 더 아래로 내리기 */
+      }
+      
+  /* 제목 스타일 */
+  .create-post-title {
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFD400; /* 노란색 */
+    margin-bottom: 40px;
+  }
+  
+  /* 폼 영역 */
+  .create-post-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* 텍스트 입력창 */
+  .create-post-input,
+  .create-post-textarea {
+    font-family: 'HakgyoansimJiugaeR', sans-serif;
+
+    width: 100%;
+    padding: 24px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #999;
+    background-color: transparent;
+    color: #333;
+    outline: none;
+    resize: none;
+  }
+  
+  /* placeholder 스타일 */
+  .create-post-input::placeholder,
+  .create-post-textarea::placeholder {
+    color: #c5c5c5;
+    font-weight: 600;
+  }
+  
+  /* 작성 버튼 스타일 */
+  .create-post-button {
+    font-family: 'HakgyoansimJiugaeR', sans-serif;
+
+    width: 180px;
+    margin: 0 auto;
+    padding: 16px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #5c2b1c;
+    background-color: #fff;
+    border: 3px solid #5c2b1c;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .create-post-button:hover {
+    background-color: #f5f5f5;
+  }
+  
